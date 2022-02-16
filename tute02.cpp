@@ -20,7 +20,7 @@ int main()
    printf("Enter Employee Type : ");
    scanf("%d", &etype);
    printf("Enter Salary  : ");
-   scanf("%f", &salary);
+   scanf("%lf", &salary);
    printf("Enter OtHrs : ");
    scanf("%d", &otHrs); 
    
@@ -38,7 +38,41 @@ int main()
 
 
    netSalary = salary + otHrs* otRate;
-   printf("Net Salary is %f ", netSalary);
+   printf("Net Salary is %lf ", netSalary);
   
    return 0;
+}
+
+//c++ code
+ #include<iostream>
+int main()
+{
+  double salary,netSalary;
+  int etype,otHrs,otRate;
+
+  std::cout << "Enter Employee Type : ";
+  std::cin >> etype;
+  std::cout << "Entry Salary : ";
+  std::cin >>salary;
+  std::cout << "Enter otHrs : ";
+  std::cin >> otHrs;
+
+  switch(etype)
+    {
+      case 1 :
+          otRate = 1000;
+          break;
+      case 2 :
+          otRate = 1500;
+          break;
+      default :
+          otRate = 1700;
+          break;
+
+    }
+    netSalary = salary + otHrs * otRate;
+    std::cout << "Net Salary is " << netSalary;
+
+ return 0;
+  
 }

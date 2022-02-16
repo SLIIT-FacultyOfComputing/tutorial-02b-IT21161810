@@ -27,3 +27,34 @@ int main() {
   std::cout << std::endl;
   return 0;
 }
+
+#include<iostream>
+
+long factorial(int num)
+{
+  int fact = 1,count;
+  for(count = 1;count <=num; count++)
+    {
+      fact = fact * count;
+    }
+
+  return(fact);
+}
+
+int main()
+{
+  int n,r;
+  float nCr;
+
+  std::cout << "Enter a value for n ";
+  std::cin  >> n;
+  std::cout << "Enter a value for r ";
+  std::cin  >> r;
+
+  nCr = factorial(n) / (factorial(r) * factorial(n - r));
+  std::cout<<std::endl;
+  std::cout << "nCr Factorial of " << n << " and " << r <<
+    " is " << nCr;
+
+  return 0;
+}
